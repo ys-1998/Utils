@@ -38,4 +38,24 @@ Date date=null;
         }
 ```
 
+## 格式时间2022-12-01 00：00：00 转换时间戳格式
+
+```
+public class TimeUtil {
+
+    public static long timeToStamp(String times){
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String mytime=times;
+        try {
+            Date parse = simpleDateFormat.parse(mytime);
+            long time = parse.getTime();
+            return time;
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return -1;
+    }
+}
+```
 
