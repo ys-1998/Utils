@@ -59,3 +59,32 @@ public class TimeUtil {
 }
 ```
 
+##时间戳 格式时间 Date LocalDateTime
+
+```
+public class Demo {
+    public static void main(String[] args) {
+        //时间戳=》String 2013-03-12 00:00:00
+        long l = System.currentTimeMillis();
+        System.out.println(l);//1681357632892
+        SimpleDateFormat formats=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String format = formats.format(l);
+        System.out.println(format);//2023-04-13 11:47:12
+
+        //String 2023-04-13 11:47:12 =>Date Thu Apr 13 11:47:12 CST 2023
+        try {
+            Date date = formats.parse(format);
+            System.out.println(date);//Thu Apr 13 11:47:12 CST 2023
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println(now);//2023-04-13T11:51:02.847
+        String f1 = now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+        System.out.println(f1);//2023-04-13 11:51:02
+        
+    }
+}
+
+```
