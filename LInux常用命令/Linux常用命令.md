@@ -100,9 +100,10 @@ docker run -itd -p 3310:3306 -v /home/mysql/conf:/etc/mysql/conf.d -v /home/mysq
 #### 4.2运行jar包
 
 ```
-docker run -itd --name=xxx -v /usr/local/javaproject/xxx.jar:/app -p 8080:8080 -w /app openjdk:8u342 java -jar xxx.jar
+docker run -itd --name=xxx -v /usr/local/javaproject/workapi:/app -p 8080:8080 -e TZ=Asia/Shanghai -w /app openjdk:8u342 java -jar xxx.jar
 
 -w 指定容器工作路径 与前挂载路径相同
+-e TZ=Asia/Shanghai 设置环境变量，设置时区
 ```
 
 ### =========================================容器======================================
