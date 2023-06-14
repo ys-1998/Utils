@@ -130,7 +130,7 @@ controller类上添加
 
 例子：
 
-![image-20221228110934263](https://ys-typora.oss-cn-chengdu.aliyuncs.com/img/image-20221228110934263.png)
+![image-20221228110934263](https://img-blog.csdnimg.cn/img_convert/242f4bf5bacefb753d4e48cc6ce2159e.png)
 
 
 
